@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    zookeeper:
+      connect-string: 啦啦啦
+  boot:
+    admin:
+      discovery:
+        instances-metadata:
+          sba-register: true
