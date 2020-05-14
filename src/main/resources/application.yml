@@ -1,9 +1,31 @@
+#spring:
+#  cloud:
+#    zookeeper:
+#      connect-string: 啦啦啦
+#  boot:
+#    admin:
+#      discovery:
+#        instances-metadata:
+#          sba-register: true
+
 spring:
-  cloud:
-    zookeeper:
-      connect-string: 啦啦啦
   boot:
     admin:
-      discovery:
-        instances-metadata:
-          sba-register: true
+      notify:
+        flybook:
+          ignore-changes: '""'
+          webhook-url: https://open.feishu.cn/open-apis/bot/hook/...
+        mail:
+          from: 837718548@qq.com
+          ignore-changes: '""'
+          template: classpath:/templates/status-changed.html
+          to: ...
+          enabled: false
+  mail:
+    host: smtp.qq.com
+    password:  ...
+    port: 587
+    test-connection: true
+    username: 837718548@qq.com
+
+
